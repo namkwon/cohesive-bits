@@ -150,7 +150,6 @@ function loadPieChart() {
 
 }
 
-
   $('#addFormBtn').on('click', function(e){
     $("#addMemberForm").toggle();
   });
