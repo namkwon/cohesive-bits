@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test - Cohesive Bits Inc.</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<div class="page-header">
+    		<h1>Equity Split Calculations</h1>
+    </div>
+		<div class="table-responsive">
+			<table id="membersTable" class="table table-bordered">
+						<thead>
+							<tr class="info header-font">
+								<th>Position</th>
+								<th>Share($)</th>
+								<th>Share(%)</th>
+								<th>Contribution<br />(Non Cash)</th>
+								<th>Contribution<br />(Cash)</th>
+								<th>Date joined the project</th>
+								<th>Days on the project</th>
+								<th>Vested Time</th>
+								<th>Opportunity Cost<br /> / Salary</th>
+								<th>Opportunity Cost<br /> / hour</th>
+								<th>Hours worked</th>
+								<th>Invested Cash</th>
+								<th>Contributed Cash</th>
+							</tr>
+						</thead>
+
+						<tbody>
+						</tbody>
+				</table>
+		</div>
+
+		<button type="button" id="addFormBtn" class="btn btn-outline-primary">Add member</button>
+		<div id="addMemberForm" style="display:none;">
+			<form id="addForm">
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Name</label>
+					<div class="col-sm-2"><input class="form-control" type="text" name="name" required></div>
+					<label class="col-sm-2 col-form-label">Opportunity Cost / Salary</label>
+					<div class="col-sm-2"><input class="form-control" type="number" step="0.01" name="opportunityCost_salary" required></div>
+					<label class="col-sm-2 col-form-label">Hours worked</label>
+					<div class="col-sm-1"><input class="form-control" type="number" name="hoursWorked" required></div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Contribution(cash)</label>
+					<div class="col-sm-2"><input class="form-control" type="number" step="0.01" name="contribution_cash" required></div>
+					<label class="col-sm-2 col-form-label">Invested Cash</label>
+					<div class="col-sm-2"><input class="form-control" type="number" step="0.01" name="investedCash" required></div>
+					<label class="col-sm-2 col-form-label">Contributed Cash</label>
+					<div class="col-sm-2"><input class="form-control" type="number" step="0.01" name="contributedCash" required></div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Date joined the project</label>
+					<div class="col-sm-2"><input class="form-control" type="date" name="joinDate" required></div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-1"><button type="submit" id="addMemberBtn" class="btn btn-primary">Submit</button></div>
+				</div>
+			</form>
+		</div>
+
+  	<script src="script.js"></script>
+
+</body>
+</html>

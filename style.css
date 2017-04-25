@@ -1,0 +1,30 @@
+table td {
+	text-align: right;
+}
+
+table th {
+	text-align: center;
+  vertical-align: bottom;
+}
+
+form {
+  padding: 20px 30px 10px 30px;
+  background-color: #cee0da;
+}
+
+form label {
+  text-align: right;
+}
+
+svg {
+	padding: 60px;
+}
+
+.label {
+  font-size: 10px;
+}
+
+.arc text {
+  font: 10px;
+  text-anchor: middle;
+}
